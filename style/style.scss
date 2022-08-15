@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+.body{
+    background-color: black;
+}
+.block-1 {
+
+    display: grid;
+    grid-template-areas:
+        "A A B B B"
+        "A A E E E"
+        "C C E E E"
+        "D D E E E"
+        "F F E E E";
+    width: 1171px;
+    height: 553px;
+    margin: 0 auto;
+    padding-top: 107px;
+    padding-bottom: 124px;
+
+        // .block-1__head
+    
+    &__head {
+        grid-area: A;
+        display: flex;
+    }
+
+    // .block-1__head--title
+
+    &__head--title {
+        max-width: 161px;
+        align-self: end;
+        font-family: 'Yeseva One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 37px;
+        letter-spacing: -0.07em;
+        text-transform: uppercase;
+        color: #E3B873;
+    }
+        // .block-1__head--line
+
+    &__head--line {
+        width: 92px;
+        height: 1px;
+        background: #E3B873;
+        align-self: center;
+        margin-top: 100px;
+
+    }
+
+    // .block-1__nav
+
+    &__nav {
+        grid-area: B;
+        align-self: center;
+        list-style: none;
+        display: flex;
+        padding-bottom: 53px;
+    }
+
+    // .block-1__nav--link
+
+    &__nav--link {
+        margin-right: 61px;
+        font-family: 'Yeseva One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+    }
+
+    // .block-1__text
+
+    &__text {
+        grid-area: C;
+        padding: 34px 50px 0 0;
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 27px;
+        color: #FFFFFF;
+    }
+
+    // .block-1__description
+
+    &__description {
+        grid-area: D;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        position: relative;
+    }
+
+    // .block-1__description--title
+
+    &__description--title {
+        margin: 0;
+        font-family: 'Yeseva One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: uppercase;
+        color: #E3B873;
+    }
+
+    // .block-1__description--text
+
+    &__description--text {
+        margin: 0;
+        position: absolute;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 21px;
+        color: #FFFFFF;
+        opacity: 0;
+    }
+
+    // .block-1__container
+
+    &__container {
+        grid-area: E;
+        width: 679px;
+        height: 482px;
+        position: relative;
+    }
+
+    &__container--arrow {
+        display: none;
+    }
+
+
+    // .block-1__arrow
+
+    &__switchs {
+        
+        grid-area: F;
+        color: #FFFFFF;
+        align-self: end;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    &__switchs--points{
+        display: flex;
+    }
+
+
+    // .block-1__arrow--item
+
+    &__switchs--arrow {
+        padding: 0;
+        cursor: pointer;
+        margin-right: 30px;
+        width: 42px;
+        height: 15px;
+        background-color: black;
+        border: none;
+    }
+    &__switchs--arrow.right{
+        margin-left: 15px;
+        transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+    }
+
+    &__switchs--points-point {
+        margin-right: 18px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        cursor: pointer;
+    }
+}
+.block-1__nav--link.active{
+    color: #E3B873;
+    border-bottom: 1px #E3B873 solid;
+}
+.container__image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0;
+}
+.container__image.active{
+    opacity: 1;
+}
+
+.block-1__switchs--points-point.active{
+    background-color: #FFFFFF;
+}
+.block-1__description--text{
+    
+}
+.block-1__description--text.active{
+    opacity: 1;
+}
