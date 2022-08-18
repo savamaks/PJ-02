@@ -21,6 +21,7 @@ let images = [{
     textRepairCost: "Upon request"
 }];
 
+//функция для переключения элементов слайдера
 function initSliders() {
 
 
@@ -38,7 +39,8 @@ function initSliders() {
     initArrows();
     initPoints();
     initTitles();
-
+    
+//добавление элементов на страницу
     function initSliders() {
         images.forEach((image, index) => {
             let imageDiv = `<div class="container__image n${index} ${index === 0 ? "active" : ""} " style="background-image:url(${images[index].url});" data-index="${index}"></div>`
@@ -57,7 +59,8 @@ function initSliders() {
             textRepairCost.innerHTML += RepairCost;
         });
     }
-
+    
+// инициализация стрелок для прокрутки картинок
     function initArrows() {
         arrowLeft.addEventListener("click", function () {
             let curNumber = +containerImage.querySelector(".active").dataset.index;
@@ -73,6 +76,7 @@ function initSliders() {
         });
     };
 
+    // добавление точек для прокрутки картинок
     function initPoints() {
         images.forEach((image, index) => {
             let pointDiv = `<div class="block-1__switchs--points-point n${index} ${index === 0 ? "active" : ""}" data-index="${index}"></div>`
@@ -86,6 +90,7 @@ function initSliders() {
 
     };
 
+    // добавление названий к картинкам
     function initTitles() {
         images.forEach((image, index) => {
             let title = `<h2 class="block-1__nav--link n${index}  ${index === 0 ? "active" : ""}"  data-index="${index}">${images[index].title}</h2>`
@@ -105,7 +110,7 @@ function initSliders() {
 
 
 
-
+// смена состояния картинок, точек и текста при переключении.
     function moveSlider(num) {
         containerImage.querySelector(".active").classList.remove("active");
         containerImage.querySelector(".n" + num).classList.add("active");
